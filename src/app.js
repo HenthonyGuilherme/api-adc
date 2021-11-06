@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(cors())
 
-/*app.get('/hello_world', (req, res) => {
+app.get('/hello_world', (req, res) => {
     res.send('aprendendo api')
 })
 
@@ -21,7 +21,7 @@ app.post('/create', (req, res) => {
     const title = req.body.title
 
     res.send(`Titulo: ${title}`)
-})*/
+})
 
 // Criar um poste (objeto)
 app.post('/create_post', async (req, res) => {
@@ -44,7 +44,7 @@ app.get('/list_posts', async (req, res) => {
 
         res.send({ posts })
     }catch(err){
-        res.status('400').send(err)
+        res.status(400).send(err)
     } 
 })
 
